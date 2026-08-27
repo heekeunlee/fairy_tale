@@ -1,0 +1,8 @@
+.env
+node_modules/
+.DS_Store
+*.log
+
+# 크루 사진을 자를 때 쓴 원본 이미지 — 이미 fairy_tale_office/site/images/에
+# 크롭본이 있어서 더 이상 파이프라인에서 안 쓰임. 용량이 커서(6MB+) 저장소에서 제외.
+reference.png
