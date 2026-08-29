@@ -34,6 +34,20 @@
 저작권·유사성 리스크 점검 업무를 실행하고 `research/{날짜}-주간보고.md`에 결과를 커밋한다.
 관리: https://claude.ai/code/routines/trig_01Dv863Y65BVfzjwK6sVpuHf
 
+### 8인 주간 업무보고
+`schedule` 스킬로 클라우드 예약 루틴 **"fairy_tale 8인 주간 업무보고"**를 만들어뒀다
+(id `trig_01Pr7sBm9a5eUVeKvDs1MfnQ`, 매주 일요일 06:00경 KST, cron `0 21 * * 6`).
+`fairy_tale`(소스)과 `fairy_tale_office`(오피스 사이트) 두 저장소를 모두 열어 지난 7일간의
+실제 git 활동을 근거로 8명 각자의 업무를 정직하게 보고하고 (활동이 없으면 "이번 주 활동
+없음"이라고 그대로 씀), `fairy_tale_office`의 `site/reports/{날짜}.html`에 보고서 페이지를
+만들어 `site/index.html` 맨 아래 "업무 주간보고" 목록에 누적 추가한다.
+관리: https://claude.ai/code/routines/trig_01Pr7sBm9a5eUVeKvDs1MfnQ
+
+⚠️ 아래 저작권 점검 루틴과 동일한 이유로, 이 루틴도 `fairy_tale_office`에 push할 때 GitHub
+권한 문제로 실패할 수 있다 (공개 저장소라도 Claude GitHub 연동에 쓰기 권한이 없으면 clone은
+되지만 push는 막힘). push가 실패해도 루틴이 생성한 보고서 전문은 실행 로그에 남으므로, 필요
+시 `RemoteTrigger`의 `list_runs`/`get_run_log`로 복구해 수동 반영할 수 있다.
+
 ### 고문의 역할
 심사위원(critic)이 "기획대로 잘 만들었는가"를 본다면, 고문은 "이게 좋은 문학이고 아이에게
 좋은가"를 별도 관점(문학적 완성도·아동 심리 발달·인문학적 함의)에서 검토한다. 작품이 새로
