@@ -6,16 +6,19 @@
 
 ## 현재 구성 (8개 역할)
 
-| 역할 | 에이전트 | 정의 파일 | 트리거 |
-|---|---|---|---|
-| 기획자 | planner | `.claude/agents/planner.md` | `/plan <주제>` |
-| 작가 | writer | `.claude/agents/writer.md` | `/write [기획서 경로]` |
-| 심사위원 | critic | `.claude/agents/critic.md` | `/review [초고 경로]` |
-| 북디자이너 | designer | `.claude/agents/designer.md` | `/illustrate [작품]` |
-| 트렌드 리서처 | researcher | `.claude/agents/researcher.md` | `/research [주제]` |
-| 마케터 | marketer | `.claude/agents/marketer.md` | `/market [작품]` |
-| 총무 | admin | `.claude/agents/admin.md` | `/audit` |
-| 고문 (아동문학가) | advisor | `.claude/agents/advisor.md` | `/consult [작품]` |
+| 역할 | 에이전트 | 정의 파일 | 트리거 | 모델 |
+|---|---|---|---|---|
+| 기획자 | planner | `.claude/agents/planner.md` | `/plan <주제>` | opus |
+| 작가 | writer | `.claude/agents/writer.md` | `/write [기획서 경로]` | sonnet(기본) |
+| 심사위원 | critic | `.claude/agents/critic.md` | `/review [초고 경로]` | opus |
+| 북디자이너 | designer | `.claude/agents/designer.md` | `/illustrate [작품]` | sonnet(기본) |
+| 트렌드 리서처 | researcher | `.claude/agents/researcher.md` | `/research [주제]` | sonnet(기본) |
+| 마케터 | marketer | `.claude/agents/marketer.md` | `/market [작품]` | sonnet(기본) |
+| 총무 | admin | `.claude/agents/admin.md` | `/audit` | sonnet(기본) |
+| 고문 (아동문학가) | advisor | `.claude/agents/advisor.md` | `/consult [작품]` | opus |
+
+기획(창의적 발상)·심사(비평적 판단)·고문(문학적 깊이)은 정성적 판단이 핵심이라 opus를 지정했다.
+나머지는 정해진 형식을 실행하는 성격이 강해 기본 모델(sonnet)로 충분하다고 판단.
 
 ### 트렌드 리서처의 두 번째 업무: 저작권·유사성 리스크 점검
 매주 1회, 완성작이 기존/출간예정 작품과 유사해 법적 리스크가 없는지 점검하고 주간보고를

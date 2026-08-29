@@ -5,4 +5,8 @@ node_modules/
 
 # 크루 사진을 자를 때 쓴 원본 이미지 — 이미 fairy_tale_office/site/images/에
 # 크롭본이 있어서 더 이상 파이프라인에서 안 쓰임. 용량이 커서(6MB+) 저장소에서 제외.
-reference.png
+reference*.png
+
+# 공모전 출품 준비 중인 원고를 로컬에서만 읽기 위한 전자책 스타일 뷰어.
+# 저장소가 공개라 절대 커밋하지 않음.
+local-reads/
